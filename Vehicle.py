@@ -4,23 +4,15 @@ class Vehicle:
         self.color = color
         self.num_wheels = num_wheels
         self.speed = speed
+        self.type = "ground"
 
-bug_object = Vehicle() #object of the vehicle class and an instance of the vehicle class
-turtle_object = Vehicle()
-rover_object = Vehicle()
+    def print_details(self):
+        print(self.name, "is", self.color, "and has a top speed of", self.speed, "mph")
+        
+bug_object = Vehicle("Beetle", "Yellow", 4, 1) #object of the vehicle class and an instance of the vehicle class
+turtle_object = Vehicle("Turtle", "Green", 2, 5)
+rover_object = Vehicle("Rover", "Purple", 4, 25)
 
-bug_object.color = "yellow"
-bug_object.num_wheels = 4
-bug_object.speed = 1
-
-turtle_object.color = "green"
-turtle_object.num_wheels = 2
-turtle_object.speed = 5
-
-rover_object.color = "purple"
-rover_object.num_wheels = 4
-rover_object.speed = 25
-
-print("This vehicle is", bug_object.color, "and has a top speed of", bug_object.speed, "mph")
-print("This vehicle is", turtle_object.color, "and has a top speed of", turtle_object.speed, "mph")
-print("This vehicle is", rover_object.color, "and has a top speed of", rover_object.speed, "mph")
+bug_object.print_details()
+turtle_object.print_details()
+rover_object.print_details()
